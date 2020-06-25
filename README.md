@@ -22,3 +22,17 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+### Notes
+
+```bash
+# install nodejs on Ubuntu focal
+sudo snap install node --classic --channel=8/stable
+
+# install webpacker
+rails webpacker:install
+
+# Start server
+rails s
+```
