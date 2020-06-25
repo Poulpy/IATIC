@@ -35,4 +35,13 @@ rails webpacker:install
 
 # Start server
 rails s
+
+# migrations
+rails g scaffold course
+
+rake db:migrate
+
+rails generate migration RemoveAuthorFromCourses author:string
+
+rake db:migrate
 ```
