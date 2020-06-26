@@ -1,4 +1,3 @@
 class Course < ApplicationRecord
-  # attr_accessor :name, :teacher
-  # validates :name, :teacher, presence: true
+  has_many :comments, dependent: :destroy
 end

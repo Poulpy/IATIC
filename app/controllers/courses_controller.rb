@@ -24,9 +24,6 @@ class CoursesController < ApplicationController
   # POST /courses
   # POST /courses.json
   def create
-    puts course_params.inspect
-    puts course_params
-
     @course = Course.new(course_params)
 
     respond_to do |format|
