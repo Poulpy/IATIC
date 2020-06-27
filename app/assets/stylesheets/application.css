@@ -10,7 +10,67 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  *= require milligram
  */
+
+.wrapper {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.navigation {
+ background:#f4f5f6;
+ border-bottom:.1rem solid #d1d1d1;
+ display:block;
+ height:5.2rem;
+ left:0;
+ max-width:100%;
+ position:fixed;
+ right:0;
+ top:0;
+ width:100%;
+ z-index:1
+}
+
+.navigation .container {
+ padding-bottom:0;
+ padding-top:0
+}
+.navigation .navigation-list {
+ list-style:none;
+ margin-bottom:0;
+ margin-right:5rem
+}
+
+.navigation .navigation-link,
+.navigation .navigation-title,
+.navigation .title {
+ display:inline;
+ font-size:1.6rem;
+ line-height:5.2rem;
+ padding:0;
+ text-decoration:none
+}
+
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    padding: 0 2.0rem;
+}
