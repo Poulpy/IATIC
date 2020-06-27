@@ -11,9 +11,7 @@ module Iatic
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    config.generators do |g|
-      g.scaffold_stylesheet false
-    end
+    config.active_storage.replace_on_assign_to_many = false
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

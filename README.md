@@ -39,7 +39,7 @@ Things you may want to cover:
 * ...
 
 
-### Notes
+### Notes & troubleshooting
 
 ```bash
 # install nodejs on Ubuntu focal
@@ -59,4 +59,7 @@ rake db:migrate
 rails generate migration RemoveAuthorFromCourses author:string
 
 rake db:migrate
+
+# for file management in database
+rails active_storage:install && rails db:migrate RAILS_ENV=development 
 ```
