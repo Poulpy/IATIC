@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to course_comments_url(@course), notice: 'Comment was successfully created.' }
+        format.html { redirect_to courses_url, notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.update(comment_params)
-        format.html { redirect_to course_comments_url(@course), notice: 'Comment was successfully updated.' }
+        format.html { redirect_to courses_url, notice: 'Comment was successfully updated.' }
         format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }
@@ -54,12 +54,9 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
-    # TODO is that usefull ?
-    @comment.files.purge
-
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to course_comments_url(@course), notice: 'Comment was successfully destroyed.' }
+      format.html { redirect_to courses_url, notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -77,7 +74,6 @@ class CommentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def comment_params
-      # params.fetch(:comment, {}).permit(:name, :teacher)
       params.require(:comment).permit(:content, :author, :course_id, files: [])
     end
 end
