@@ -1,4 +1,19 @@
-# README
+# IATIC
+
+IATIC is a rails app to keep track of school assignements.
+
+## Install
+
+```
+git clone git@github.com:Poulpy/IATIC.git
+
+cd iatic
+
+rails server
+```
+
+
+## /
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
