@@ -2,6 +2,8 @@
 
 IATIC is a rails app to keep track of school assignements.
 
+![](app/assets/images/iatic.png)
+
 ## Install
 
 ```
