@@ -44,11 +44,13 @@ Things you may want to cover:
 ### Notes & troubleshooting
 
 ```bash
+rails new iatic --database=postgresql --webpack
+
 # install nodejs on Ubuntu focal
 sudo snap install node --classic --channel=8/stable
 
 # install webpacker
-rails webpacker:install
+# rails webpacker:install
 
 # Start server
 rails s
@@ -64,4 +66,6 @@ rake db:migrate
 
 # for file management in database
 rails active_storage:install && rails db:migrate RAILS_ENV=development 
+
+
 ```
