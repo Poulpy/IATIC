@@ -67,5 +67,11 @@ rake db:migrate
 # for file management in database
 rails active_storage:install && rails db:migrate RAILS_ENV=development 
 
-
 ```
+
+### TODO
+
+- Document uploader (has many documents)
+
+
+

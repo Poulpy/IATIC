@@ -1,53 +1,58 @@
-<%= button_to "New course", new_course_path, :method => "get", class: 'float-right button-outline', style: 'margin:0;' %>
+<br>
+
+<b><%= link_to "New course", new_course_path, class: 'float-right yellow-underline', style: 'margin:0' %></b> 
+
+<br>
+
+<p id="notice"><%= notice %></p>
 
 
-  <p id="notice"><%= notice %></p>
-  <h1>Courses</h1>
+<% @courses.each do |course| %>
+  <div class="container lightgrey-border p-10 m-10">
 
-  <table class="m-10">
-    <thead>
-      <tr>
-        <th colspan="5"></th>
-      </tr>
-    </thead>
+    <div class="row m-10">
+      <div class="column">
+        <b><%= course.name %></b>  
+      </div>
+      <div class="column"><%= course.teacher %></div>
+      <div class="column column-offset-25"><%= link_to 'Comment', new_course_comment_path(course) %></div>
+      <div class="column"><%= link_to 'Edit', edit_course_path(course) %></div>
+      <div class="column"><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+    </div>
+    
 
-    <tbody>
-      <% @courses.each do |course| %>
-        <tr>
-          <th scope="row">
-            <%= course.name %> 
-          </th>
-          <td><%= course.teacher %> </td>
-          <td><%= link_to 'Add comment', new_course_comment_path(course) %></td>
-          <!-- <td><%#= link_to 'Show', course, class: 'button button-outline' %></td> -->
-          <td><%= link_to 'Edit', edit_course_path(course), class: 'button button-outline' %></td>
-          <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %></td>
-        </tr>
-        <% course.comments.each do |comment| %>
-          <tr>
-            <td colspan="3">
-              <pre>
-                <code><%= comment.content %>
-                </code>
-              </pre>
-              <% if comment.files.attached? %>
-                <% comment.files.each do |file| %>
-                  <%= link_to file.blob.filename, rails_blob_path(file, disposition: 'attachment') %>
+    <% course.comments.each do |comment| %>
+      <div class="row mt-10">
+        <div class="column column-70 bg-lightgrey p-10">
+          <%= simple_format comment.content %>
+        </div>
+        <div class="column">
+          <% if comment.files.attached? %>
+            <% comment.files.each do |file| %>
+              <%= link_to file.blob.filename, rails_blob_path(file, disposition: 'attachment') %>
 
-                  <% if file.previewable? %>
-                    <%= image_tag file.preview(resize_to_limit: [100, 100]) %>
-                  <% end %>
-                <% end %>
-              <% end %>
-            </td>
-            <td><%= link_to 'Edit', edit_course_comment_path(course, comment), class: 'mt-0' %></td>
-            <td><%= link_to 'Destroy', [course, comment], method: :delete, data: {confirm: 'Are you sure?'}, class: 'mt-0' %></td>
-          </tr>
-        <% end %>
-      <% end %>
-    </tbody>
-  </table>
-  
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      
+
+      <div class="row">
+        <div class="column column-10"><%= link_to 'Edit', edit_course_comment_path(course, comment), class: 'mt-0' %></div>
+        <div class="column column-10"><%= link_to 'Destroy', [course, comment], method: :delete, data: {confirm: 'Are you sure?'}, class: 'mt-0' %></div>
+      </div>
+      
+      <br>
+      
+    <% end %>
+  </div>
+  <hr>
+  <br>
+  <br>
+  <br>
+
+<% end %>
+
 
 <br>
 
