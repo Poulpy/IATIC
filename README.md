@@ -72,6 +72,8 @@ rails active_storage:install && rails db:migrate RAILS_ENV=development
 ### TODO
 
 - Document uploader (has many documents)
+- Refactor CSS everywhere
+- Show attachments on edit page (course/comment)
 
 
 
