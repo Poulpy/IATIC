@@ -14,6 +14,24 @@
  *= require milligram
  */
 
+.happy-link {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 10px solid yellow;
+}
+.happy-link:focus {
+    outline: dashed #a8e549 5px;
+}
+
+.nice-link {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 10px solid #b0e75b;
+}
+.nice-link:focus {
+    outline: dashed #a8e549 5px;
+}
+
 .yellow-underline {
     /*border-bottom: 10px solid yellow; */
     /*margin-top: -10px;*/
@@ -23,7 +41,7 @@
     border-bottom: 10px solid yellow;
 }
 
-.lightgrey-border {
+.green-border {
     border: 0.1em solid #a8e549;
 }
 
@@ -41,6 +59,10 @@
 
 .mt-10 {
     margin-top: 10px;
+}
+
+.mt-5 {
+    margin-top: 5px;
 }
 
 .pt-10 {

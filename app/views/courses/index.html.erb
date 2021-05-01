@@ -1,6 +1,6 @@
 <br>
 
-<b><%= link_to "New course", new_course_path, class: 'float-right yellow-underline', style: 'margin:0' %></b> 
+<%= link_to "New course", new_course_path, class: 'float-right happy-link' %>
 
 <br>
 
@@ -8,16 +8,16 @@
 
 
 <% @courses.each do |course| %>
-  <div class="container lightgrey-border p-10 m-10">
+  <div class="container green-border m-10">
 
     <div class="row m-10">
       <div class="column">
         <b><%= course.name %></b>  
       </div>
       <div class="column"><%= course.teacher %></div>
-      <div class="column column-offset-25"><%= link_to 'Comment', new_course_comment_path(course) %></div>
-      <div class="column"><%= link_to 'Edit', edit_course_path(course) %></div>
-      <div class="column"><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      <div class="column column-offset-25"><%= link_to 'Comment', new_course_comment_path(course), class: 'happy-link' %></div>
+      <div class="column"><%= link_to 'Edit', edit_course_path(course), class: 'happy-link' %></div>
+      <div class="column"><%= link_to 'Destroy', course, method: :delete, class: 'happy-link', data: { confirm: 'Are you sure?' } %></div>
     </div>
     
 
@@ -35,11 +35,12 @@
           <% end %>
         </div>
       </div>
+
       
 
-      <div class="row">
-        <div class="column column-10"><%= link_to 'Edit', edit_course_comment_path(course, comment), class: 'mt-0' %></div>
-        <div class="column column-10"><%= link_to 'Destroy', [course, comment], method: :delete, data: {confirm: 'Are you sure?'}, class: 'mt-0' %></div>
+      <div class="row mt-5">
+        <div class="column column-10"><%= link_to 'Edit', edit_course_comment_path(course, comment), class: 'mt-0 nice-link' %></div>
+        <div class="column column-10"><%= link_to 'Destroy', [course, comment], method: :delete, data: {confirm: 'Are you sure?'}, class: 'nice-link' %></div>
       </div>
       
       <br>
