@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'New Note', new_note_path(sector: @sector), class: 'happy-link' %>
+
+<br>
+<br>
+
+<div class="container m-10">
+  <% @notes.each do |note| %>
+    <div class="row m-10 lightblue-vr">
+      <div class="column column-80 m-10">
+        <%= note.content %>
+      </div>
+      <div class="column">    
+        <%= link_to 'Edit', edit_note_path(note, sector: @sector), class: 'awesome-link mr-5' %>
+        <%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' }, class: 'danger-link' %>
+      </div>
+    </div>
+
+    <br>
+    <br>
+  <% end %>
+</div>
+

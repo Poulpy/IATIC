@@ -13,7 +13,7 @@
 
     <header id="header">
       <div class="innertube">
-        <h1>Documents ISTY</h1>
+        <h1><%= link_to 'Documents ISTY', root_path, class: 'awesome-link' %></h1>
       </div>
     </header>
     
@@ -31,7 +31,7 @@
         <div class="innertube pt-10">
           <h3>IATIC 3</h3>
           <ul>
-            <li><a href="#">Link 1</a></li>
+            <li><%= link_to 'Notes', notes_path(sector: :iatic3), class: 'thin-link' %></li>
             <li><a href="#">Link 2</a></li>
             <li><a href="#">Link 3</a></li>
             <li><a href="#">Link 4</a></li>
@@ -39,7 +39,7 @@
           </ul>
           <h3>IATIC 4</h3>
           <ul>
-            <li><a href="#">Link 1</a></li>
+            <li><%= link_to 'Notes', notes_path(sector: :iatic4), class: 'thin-link' %></li>
             <li><a href="#">Link 2</a></li>
             <li><a href="#">Link 3</a></li>
             <li><a href="#">Link 4</a></li>
@@ -47,7 +47,7 @@
           </ul>
           <h3>IATIC 5</h3>
           <ul>
-            <li><a href="#">Link 1</a></li>
+            <li><%= link_to 'Notes', notes_path(sector: :iatic5), class: 'thin-link' %></li>
             <li><a href="#">Link 2</a></li>
             <li><a href="#">Link 3</a></li>
             <li><a href="#">Link 4</a></li>

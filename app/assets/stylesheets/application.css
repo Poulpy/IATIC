@@ -12,7 +12,40 @@
  *
  *= require_self
  *= require milligram
+ *= require trix
  */
+
+.lightblue-vr {
+    text-decoration: none;
+    border-left: 10px solid #00ffd4;
+}
+
+.thin-link {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 5px solid #6bff42;
+}
+.thin-link:focus {
+    outline: dashed #a8e549 5px;
+}
+
+.danger-link {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 10px solid #af4141;
+}
+.danger-link:focus {
+    outline: dashed #af4141 5px;
+}
+
+.awesome-link {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 10px solid #6bff42;
+}
+.awesome-link:focus {
+    outline: dashed #a8e549 5px;
+}
 
 .happy-link {
     font-weight: bold;
@@ -33,16 +66,22 @@
 }
 
 .yellow-underline {
-    /*border-bottom: 10px solid yellow; */
-    /*margin-top: -10px;*/
-
-    /*text-decoration:underline yellow;*/
     text-decoration: none;
     border-bottom: 10px solid yellow;
 }
 
 .green-border {
     border: 0.1em solid #a8e549;
+}
+
+/* Margins & Paddings */
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
 }
 
 .p-10 {
@@ -69,9 +108,12 @@
     padding-top: 10px;
 }
 
-
 .pt-1 {
     padding-top: 1px;
+}
+
+.mr-5 {
+    margin-right: 5px;
 }
 
 
