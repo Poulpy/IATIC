@@ -17,6 +17,9 @@
       </div>
     </div>
 
+    <% unless note.author.blank? %>
+      <%= note.author %>
+    <% end %>
     <br>
     <br>
   <% end %>

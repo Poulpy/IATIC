@@ -48,6 +48,9 @@ rake db:migrate
 
 # for file management in database
 rails active_storage:install && rails db:migrate RAILS_ENV=development 
+rails actiontext:install 
+
+# Install ImageMagick
 
 ```
 
@@ -56,7 +59,5 @@ rails active_storage:install && rails db:migrate RAILS_ENV=development
 - Document uploader (has many documents)
 - Refactor CSS everywhere
 - Show attachments on edit page (course/comment)
-- Add rich text editor to notes form
-- Show notes on notes' index page
 
 

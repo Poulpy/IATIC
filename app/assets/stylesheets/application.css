@@ -20,6 +20,15 @@
     border-left: 10px solid #00ffd4;
 }
 
+.meh-link {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 5px solid #9e90d3;
+}
+.meh-link:focus {
+    outline: dashed #a8e549 5px;
+}
+
 .thin-link {
     font-weight: bold;
     text-decoration: none;
