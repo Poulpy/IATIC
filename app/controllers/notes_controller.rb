@@ -5,7 +5,7 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all.where(sector: @sector).with_rich_text_content
+    @notes = Note.all.where(sector: @sector).order(created_at: :desc).with_rich_text_content
   end
 
   # GET /notes/1
